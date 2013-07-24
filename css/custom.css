@@ -96,3 +96,13 @@ body {
         border-radius: 0 3px 3px 0;
     }
 }
+
+@media (max-width: 767px) {
+  body {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .container {
+    padding: 60px 8.1%;
+  }
+}
