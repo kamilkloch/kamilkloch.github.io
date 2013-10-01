@@ -9,44 +9,34 @@
     <meta name="author" content="Kamil Kloch">
 
     <!--  styles -->
-    <link href="./css/bootstrap.css" rel="stylesheet">
-    <link href="./css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/custom.css" rel="stylesheet">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-        <script src="./js/html5shiv.js"></script>
+      <script src="./js/html5shiv.js"></script>
+      <script src="./js/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
-
+    <div id="colorBar"></div>
     <div class="container">
 
         <div class="masthead">
             <a href="http://kamilkloch.com">
                 <h1>Kamil Kloch</h1>
             </a>
-            <!-- <h1>Kamil Kloch</h1> -->
 
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <!-- <div class="nav-collapse"> -->
-                    <ul class="nav">
-                        <li><a href="#">Home</a>
-                        </li>
-                        <li><a href="#projects">Projects</a>
-                        </li>
-                        <li><a href="#publications">Publications</a>
-                        </li>
-                        <li><a href="#personal">Personal</a>
-                        </li>
-                    </ul>
-                    <!-- </div> -->
-                </div>
-            </div>
-            <!-- /.navbar -->
+            <div class="navbar navbar-default">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#personal">Personal</a></li>
+                </ul>
+            </div>            
         </div>
 
 
@@ -54,32 +44,18 @@
 
         <section id="projects">
             <div class="page-header">
-                <div class="pull-right text-error">
-                    <strong>// TODO</strong>
-                </div>
                 <h2>Projects</h2>
                 <hr />
             </div>
 
+            <h4><a href="http://www.socionical.eu">SOCIONICAL</a> <small>(02/2009 – 02/2013)</small></h4>
+            <p>budget: 6.8M EUR, duration: 48 months, 14 Partners (ETH Zürich, London School of Economics, TU München, Fraunhofer FIT and others). Role: Deputy Coordinator.</p>
 
-            <ul>
-                <li>
-                    <b>SOCIONICAL</b> 
-                    <br />
+            <h4><a href="http://www.dfki.de/web/presse/pressemitteilungen_intern/2012/projekt-cocorec201c-neue-technologien-zur-sensorischen-aktivitatserkennung-und-kollaboration-von-systemen/">CoCoRec</a> <small>(09/2012 – present)</small></h4>
+            <p>budget: 1.2M EUR, duration: 36 months. Collaborative Context Recognition: indoor localisation, collective states and phenomena (mobility patterns, crowd dynamics, crowd density). Role: Project Manager.</p>
 
-                </li>
-
-                <li>
-                    <b>CoCoRec</b>
-                    <br />
-                </li>
-
-                <li>
-                    <b>reckonMe</b>
-                    <br />
-                </li>
-            </ul>
-
+            <h4><a href="http://github.com/reckonMe">reckonMe</a> <small>(09/2011 – present)</small></h4>
+            <p>Live inertial navigation, proximity detection (<a href="http://en.wikipedia.org/wiki/Bluetooth_low_energy">BLE</a>) and collaborative localisation on a mobile device. Role: Developer (iOS, C++, python, couchdb).</p>
 
         </section>
 
@@ -97,7 +73,7 @@
             <p>
                 (BiBTeX source of the list available on <a href="https://github.com/kamilkloch/publication-list">github</a>)
             </p>
-            <ol>
+            <small> <ol>
                 <li>
                     <p>
                         Bart&#322;omiej Bosek, Stefan Felsner, Kamil Kloch, Tomasz Krawczyk, Grzegorz Matecki, and Piotr Micek. On-line chain partitions of orders: a survey.
@@ -208,7 +184,7 @@
                         </a>.
                     </p>
                 </li>
-            </ol>
+            </ol> </small>
 
         </section>
 
@@ -247,8 +223,6 @@
     <!-- javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster 
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
     -->
     <script type="text/javascript" src="./js/retina.js"></script>
 
