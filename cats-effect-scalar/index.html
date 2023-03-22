@@ -1196,7 +1196,7 @@ lazy val log = Logger.takingImplicit[this.type, LoggingCtx]
 implicit lazy val ctx = LoggingCtx.empty.withField("k1", "v1")
 
 log.infoConsole("Impure")
-// INFO  [Thread-771] r.MdocSession$MdocApp:10 - [k1=v1] Impure
+// INFO  [Thread-883] r.MdocSession$MdocApp:10 - [k1=v1] Impure
 ```
 <!-- &*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*&*  -->
 ---
@@ -1355,11 +1355,11 @@ def parCtxLog(n: Int) = (1 to n).toList.parTraverse_ { cid =>
     LoggingCtx.use { ctx => IO(log.info("Scalar 2023")(ctx)) }
 } >> 
   LoggingCtx.use(implicit ctx => IO(log.info("Empty")))).yolo()
-// INFO  [io-compute-4] r.MdocSession$MdocApp:308 - [k1=v1] Impure
-// INFO  [io-compute-4] r.MdocSession$MdocApp:313 - [k1=v1, cid=2] 2
-// INFO  [io-compute-5] r.MdocSession$MdocApp:313 - [k1=v1, cid=1] 1
-// INFO  [io-compute-0] r.MdocSession$MdocApp:319 - [k1=v1] Scalar 2023
-// INFO  [io-compute-0] r.MdocSession$MdocApp:321 - [] Empty
+// INFO  [io-compute-5] r.MdocSession$MdocApp:308 - [k1=v1] Impure
+// INFO  [io-compute-0] r.MdocSession$MdocApp:313 - [k1=v1, cid=1] 1
+// INFO  [io-compute-5] r.MdocSession$MdocApp:313 - [k1=v1, cid=2] 2
+// INFO  [io-compute-9] r.MdocSession$MdocApp:319 - [k1=v1] Scalar 2023
+// INFO  [io-compute-9] r.MdocSession$MdocApp:321 - [] Empty
 ```
 
 
@@ -1376,11 +1376,11 @@ for the slides inspiration
 ---
 ## Closing remarks
 
-Hit Typelevel [Discord](https://discord.gg/QNnHKHq5Ts) channels
-
 <!--Effect systems classics:-->
 <!-- - [Daniel Spiewak - The Case For Effect Systems](https://www.youtube.com/watch?v=qgfCmQ-2tW0)-->
 <!-- - [Fabio Labella - How do Fibers Work?](https://youtu.be/x5_MmZVLiSM)-->
+
+Slides available on https://kamilkloch.github.io/cats-effect-scalar
 
 Slides backed by [remark.js](https://github.com/remarkjs/remark) and [mdoc](https://scalameta.org/mdoc/)
 
